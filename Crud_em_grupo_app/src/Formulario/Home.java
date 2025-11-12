@@ -54,17 +54,15 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SoMensag-Pagina incial");
         setBackground(new java.awt.Color(51, 51, 51));
-        setExtendedState(0);
         setSize(new java.awt.Dimension(10, 10));
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel2.setBackground(java.awt.Color.white);
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         textField1.setBackground(new java.awt.Color(204, 204, 204));
         textField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        button1.setActionCommand("");
         button1.setBackground(new java.awt.Color(0, 204, 51));
         button1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         button1.setLabel("Enviar");
@@ -77,7 +75,7 @@ public class Home extends javax.swing.JFrame {
         jbtnIniciarSessao.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jbtnIniciarSessao.setForeground(new java.awt.Color(255, 255, 255));
         jbtnIniciarSessao.setText("Iniciar Sessâo");
-        jbtnIniciarSessao.setBorder(new javax.swing.border.SoftBevelBorder(0, null, new java.awt.Color(153, 255, 153), null, null));
+        jbtnIniciarSessao.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(153, 255, 153), null, null));
         jbtnIniciarSessao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnIniciarSessaoActionPerformed(evt);
@@ -93,7 +91,7 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setText("Para:");
 
-        checkbox1.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
+        checkbox1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         checkbox1.setLabel("Ao enviar mensagens no SoMensag, concorda");
 
         label1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N

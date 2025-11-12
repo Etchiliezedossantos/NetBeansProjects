@@ -59,12 +59,13 @@ public class Cadastro extends javax.swing.JFrame {
         pnVerdeCLayout.setHorizontalGroup(
             pnVerdeCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnVerdeCLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90))
-            .addGroup(pnVerdeCLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(lbLegendaLogoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnVerdeCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnVerdeCLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(lbLegendaLogoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnVerdeCLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
         pnVerdeCLayout.setVerticalGroup(
