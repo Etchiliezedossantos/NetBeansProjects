@@ -13,6 +13,19 @@ import java.net.URL;
 public class ApiClient {
     private static final String BASE_URL = "http://localhost:8000/api";
     
+    public static String extrairIdDaResposta(String resposta) {
+    try {
+        // Procura o padrão "id":número no JSON
+        int startIndex = resposta.indexOf("\"id\":") + 5;
+        int endIndex = resposta.indexOf(",", startIndex);
+        if (endIndex == -1) endIndex = resposta.indexOf("}", startIndex);
+        
+        return resposta.substring(startIndex, endIndex).trim();
+    } catch (Exception e) {
+        return "1"; // fallback se der erro
+    }
+}
+    
     public static String fazerRequisicao(String endpoint, String metodo, String jsonBody){
         try{
             URL url = new URL(BASE_URL + endpoint);

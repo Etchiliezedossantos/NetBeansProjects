@@ -212,6 +212,8 @@ public class Login extends javax.swing.JFrame {
            return;
        }
        
+       
+       
        //validar se e numero
        try{
            Integer.parseInt(numeroStr);
@@ -226,12 +228,12 @@ public class Login extends javax.swing.JFrame {
            
            String resposta = ApiClient.fazerRequisicao("/login", "POST", json);
            
-           System.out.println("Resposta completa: " + resposta);
-           JOptionPane.showMessageDialog(this, "debug: " + resposta);
            
            if(resposta.contains("\"status\":\"sucesso\"")){
-               JOptionPane.showMessageDialog(this, "login realizado com sucesso!");
                
+               SessaoUtilizador.idUtilizador = Integer.parseInt(ApiClient.extrairIdDaResposta(resposta));
+               
+               JOptionPane.showMessageDialog(this, "login realizado com sucesso!");
                new menu().setVisible(true);
                this.dispose();
            }else{

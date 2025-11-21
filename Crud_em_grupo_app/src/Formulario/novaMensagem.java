@@ -5,6 +5,8 @@
  */
 package Formulario;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -84,6 +86,11 @@ public class novaMensagem extends javax.swing.JFrame {
         btnEnviarNovaMensagem.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnEnviarNovaMensagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/Enviar.png"))); // NOI18N
         btnEnviarNovaMensagem.setText("Enviar");
+        btnEnviarNovaMensagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarNovaMensagemActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/soma.png"))); // NOI18N
@@ -112,11 +119,12 @@ public class novaMensagem extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(pnHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbParaNewMensagem)
-                    .addComponent(txtNovaMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEnviarNovaMensagem)
-                    .addComponent(jButton1))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbParaNewMensagem)
+                        .addComponent(txtNovaMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEnviarNovaMensagem)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 114, Short.MAX_VALUE))
@@ -136,6 +144,62 @@ public class novaMensagem extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEnviarNovaMensagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarNovaMensagemActionPerformed
+        // TODO add your handling code here:
+        if (SessaoUtilizador.idUtilizador == 0) {
+        JOptionPane.showMessageDialog(this, "Erro: Utilizador não está logado!");
+        return;
+    }
+    
+    // Pegar dados dos campos
+    String idConversaStr = txtNovaMensagem.getText().trim(); // Número da pessoa/conversa
+    String conteudo = jTextArea2.getText().trim(); // Texto da mensagem
+    
+    
+    // Validar
+    if (idConversaStr.isEmpty() || conteudo.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Preencha todos os campos!");
+        return;
+    }
+    
+    // Validar ID da conversa
+    try {
+        Integer.parseInt(idConversaStr);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Número deve conter apenas dígitos!");
+        return;
+    }
+    
+    try {
+        // Criar JSON para enviar mensagem
+        String json = String.format(
+            "{\"id_conversa\":%s, \"id_remetente\":%s, \"conteudo\":\"%s\", \"tipo_mensagem\":\"texto\"}",
+            idConversaStr, 
+            SessaoUtilizador.idUtilizador, // ID do utilizador logado
+            conteudo.replace("\"", "\\\"") // Escapar aspas no texto
+        );
+        
+        
+        
+        // Fazer requisição
+        String resposta = ApiClient.fazerRequisicao("/mensagens", "POST", json);
+        
+        
+        
+        // Verificar sucesso
+        if (resposta.contains("\"status\":\"success\"")) {
+            JOptionPane.showMessageDialog(this, "Mensagem enviada com sucesso!");
+            // Limpar campo da mensagem
+            jTextArea2.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, "Erro ao enviar mensagem!");
+        }
+        
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Erro: " + e.getMessage());
+    }
+    }//GEN-LAST:event_btnEnviarNovaMensagemActionPerformed
 
     /**
      * @param args the command line arguments
