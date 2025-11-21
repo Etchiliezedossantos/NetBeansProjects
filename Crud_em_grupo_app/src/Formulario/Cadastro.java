@@ -5,6 +5,8 @@
  */
 package Formulario;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -34,13 +36,11 @@ public class Cadastro extends javax.swing.JFrame {
         lbLogin = new javax.swing.JLabel();
         lbNomec = new javax.swing.JLabel();
         campoNomeC = new javax.swing.JTextField();
-        lbSenhaC = new javax.swing.JLabel();
-        campoSenhaC = new javax.swing.JPasswordField();
         btnEntrarC = new javax.swing.JButton();
         lbLoginCadastroC = new java.awt.Label();
         btnCadastroLoginC = new javax.swing.JButton();
         label1 = new java.awt.Label();
-        jTextField1 = new javax.swing.JTextField();
+        numero = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 500));
@@ -91,12 +91,6 @@ public class Cadastro extends javax.swing.JFrame {
         campoNomeC.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         campoNomeC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lbSenhaC.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        lbSenhaC.setText("Senha");
-
-        campoSenhaC.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        campoSenhaC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         btnEntrarC.setBackground(new java.awt.Color(17, 67, 46));
         btnEntrarC.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnEntrarC.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,7 +113,7 @@ public class Cadastro extends javax.swing.JFrame {
         label1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         label1.setText("Número de Telefone");
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        numero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout pnBrancoCLayout = new javax.swing.GroupLayout(pnBrancoC);
         pnBrancoC.setLayout(pnBrancoCLayout);
@@ -131,15 +125,11 @@ public class Cadastro extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBrancoCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(pnBrancoCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBrancoCLayout.createSequentialGroup()
-                                .addGroup(pnBrancoCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbSenhaC)
-                                    .addComponent(lbNomec))
-                                .addGap(308, 308, 308))
+                                .addComponent(lbNomec)
+                                .addGap(310, 310, 310))
                             .addGroup(pnBrancoCLayout.createSequentialGroup()
                                 .addGroup(pnBrancoCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnBrancoCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(campoNomeC, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(campoSenhaC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE))
+                                    .addComponent(campoNomeC, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnEntrarC, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap()))
                         .addGroup(pnBrancoCLayout.createSequentialGroup()
@@ -149,7 +139,7 @@ public class Cadastro extends javax.swing.JFrame {
                                     .addComponent(lbLoginCadastroC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(btnCadastroLoginC))
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addContainerGap()))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBrancoCLayout.createSequentialGroup()
                         .addComponent(lbLogin)
@@ -167,12 +157,8 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lbSenhaC)
-                .addGap(18, 18, 18)
-                .addComponent(campoSenhaC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(114, 114, 114)
                 .addComponent(btnEntrarC, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnBrancoCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -205,8 +191,48 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void btnEntrarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarCActionPerformed
         //pegar dados dos campos
-        String nome = txtNome.getText();
+        String nome = campoNomeC.getText();
+        String numeroStr = numero.getText();
         
+        if(nome.isEmpty() || numeroStr.isEmpty()){
+            JOptionPane.showMessageDialog(this, "preencha todos os campos");
+            return;
+        }
+        
+        try{
+            Integer.parseInt(numeroStr);
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "Numero deve conter apenas digitos!");
+            return;
+        }
+        
+        try{
+             String json = String.format(
+            "{\"nome\":\"%s\", \"numero\":%s}",
+            nome, numeroStr
+        );
+             String resposta = ApiClient.fazerRequisicao("/register", "POST", json);
+           
+        
+        // Se sucesso, limpar campos
+            if (resposta.contains("\"status\":\"success\"")) {
+                // Limpar campos
+                campoNomeC.setText("");
+                numero.setText("");
+                // Mostrar apenas mensagem amigável
+                JOptionPane.showMessageDialog(this, "Cadastro realizado com sucesso!");
+            } else {
+                // Se houve erro, mostrar mensagem de erro de forma mais limpa
+                if (resposta.contains("numero") && resposta.contains("já existe")) {
+                    JOptionPane.showMessageDialog(this, "Erro: Este número já está registado!");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Erro no cadastro. Tente outro número.");
+                }
+            }
+             
+        }catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Erro: " + e.getMessage());
+    }
     }//GEN-LAST:event_btnEntrarCActionPerformed
 
     /**
@@ -248,15 +274,13 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastroLoginC;
     private javax.swing.JButton btnEntrarC;
     private javax.swing.JTextField campoNomeC;
-    private javax.swing.JPasswordField campoSenhaC;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
     private java.awt.Label label1;
     private java.awt.Label lbLegendaLogoC;
     private javax.swing.JLabel lbLogin;
     private java.awt.Label lbLoginCadastroC;
     private javax.swing.JLabel lbNomec;
-    private javax.swing.JLabel lbSenhaC;
+    private javax.swing.JTextField numero;
     private javax.swing.JPanel pnBrancoC;
     private javax.swing.JPanel pnVerdeC;
     // End of variables declaration//GEN-END:variables

@@ -126,18 +126,12 @@
                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lbSenhaC" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbNomec" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
+                                  <Component id="lbNomec" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="310" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="campoNomeC" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="campoSenhaC" alignment="0" pref="306" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="campoNomeC" alignment="0" min="-2" pref="306" max="-2" attributes="0"/>
                                       <Component id="btnEntrarC" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -151,7 +145,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="btnCadastroLoginC" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jTextField1" alignment="0" min="-2" pref="306" max="-2" attributes="0"/>
+                                  <Component id="numero" alignment="0" min="-2" pref="306" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -176,12 +170,8 @@
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="label1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="30" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="lbSenhaC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="campoSenhaC" min="-2" pref="30" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="numero" min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                   <Component id="btnEntrarC" min="-2" pref="33" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
@@ -214,26 +204,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="campoNomeC">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
-            </Property>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder/>
-              </Border>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbSenhaC">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Senha"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="campoSenhaC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="0"/>
@@ -295,7 +265,7 @@
             <Property name="text" type="java.lang.String" value="N&#xfa;mero de Telefone"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="numero">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
