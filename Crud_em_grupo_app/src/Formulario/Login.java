@@ -5,6 +5,8 @@
  */
 package Formulario;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -33,13 +35,13 @@ public class Login extends javax.swing.JFrame {
         lbLegendaLogo = new java.awt.Label();
         pnBranco = new javax.swing.JPanel();
         lbLogin = new javax.swing.JLabel();
-        lbNome = new javax.swing.JLabel();
+        Nome = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
-        lbSenha = new javax.swing.JLabel();
-        campoSenha = new javax.swing.JPasswordField();
+        Numero = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         lbLoginCadastro = new java.awt.Label();
         btnLoginCadastro = new javax.swing.JButton();
+        numero2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -91,17 +93,14 @@ public class Login extends javax.swing.JFrame {
         lbLogin.setForeground(new java.awt.Color(17, 67, 46));
         lbLogin.setText("LOGIN");
 
-        lbNome.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        lbNome.setText("Número de Telefone");
+        Nome.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Nome.setText("nome");
 
         campoNome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         campoNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lbSenha.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        lbSenha.setText("Senha");
-
-        campoSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        campoSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Numero.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Numero.setText("numero");
 
         btnEntrar.setBackground(new java.awt.Color(17, 67, 46));
         btnEntrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -135,26 +134,23 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnBrancoLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(pnBrancoLayout.createSequentialGroup()
                                 .addComponent(lbLoginCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnLoginCadastro)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBrancoLayout.createSequentialGroup()
-                                    .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lbSenha)
-                                        .addComponent(lbNome))
-                                    .addGap(163, 163, 163))
-                                .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(campoNome, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnLoginCadastro))
+                            .addComponent(campoNome, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
+                            .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Numero)
+                            .addComponent(numero2)))
                     .addGroup(pnBrancoLayout.createSequentialGroup()
                         .addGap(140, 140, 140)
                         .addComponent(lbLogin)))
                 .addGap(0, 84, Short.MAX_VALUE))
+            .addGroup(pnBrancoLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(Nome)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnBrancoLayout.setVerticalGroup(
             pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,20 +158,20 @@ public class Login extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(lbLogin)
                 .addGap(68, 68, 68)
-                .addComponent(lbNome)
+                .addComponent(Nome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(lbSenha)
-                .addGap(18, 18, 18)
-                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(47, 47, 47)
+                .addComponent(Numero)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(numero2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lbLoginCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLoginCadastro))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         jPanel1.add(pnBranco);
@@ -209,8 +205,42 @@ public class Login extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
        // TODO add your handling code here:luana
-       new menu().setVisible(true);
-       this.dispose();
+       String numeroStr = numero2.getText().trim();
+       
+       if(numeroStr.isEmpty()){
+           JOptionPane.showMessageDialog(this, "digite o seu numero!");
+           return;
+       }
+       
+       //validar se e numero
+       try{
+           Integer.parseInt(numeroStr);
+       }catch(NumberFormatException e){
+           JOptionPane.showMessageDialog(this, "numero deve conter apenas digitios!");
+           return;
+       }
+       
+       try{
+           //cria o json apenas com numero
+           String json = String.format("{\"numero\":%s}", numeroStr);
+           
+           String resposta = ApiClient.fazerRequisicao("/login", "POST", json);
+           
+           System.out.println("Resposta completa: " + resposta);
+           JOptionPane.showMessageDialog(this, "debug: " + resposta);
+           
+           if(resposta.contains("\"status\":\"sucesso\"")){
+               JOptionPane.showMessageDialog(this, "login realizado com sucesso!");
+               
+               new menu().setVisible(true);
+               this.dispose();
+           }else{
+               JOptionPane.showMessageDialog(this, "numero nao encontrado!");
+           }
+       }catch(Exception e){
+           JOptionPane.showMessageDialog(this, "erro de conexao: "+ e.getMessage());
+       }
+       
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
@@ -249,17 +279,17 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Nome;
+    private javax.swing.JLabel Numero;
     private javax.swing.JButton btnEntrar;
     private javax.swing.JButton btnLoginCadastro;
     private javax.swing.JTextField campoNome;
-    private javax.swing.JPasswordField campoSenha;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private java.awt.Label lbLegendaLogo;
     private javax.swing.JLabel lbLogin;
     private java.awt.Label lbLoginCadastro;
-    private javax.swing.JLabel lbNome;
-    private javax.swing.JLabel lbSenha;
+    private javax.swing.JTextField numero2;
     private javax.swing.JPanel pnBranco;
     private javax.swing.JPanel pnVerde;
     // End of variables declaration//GEN-END:variables
