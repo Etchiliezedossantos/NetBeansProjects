@@ -101,6 +101,11 @@ public class Cadastro extends javax.swing.JFrame {
         btnEntrarC.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnEntrarC.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrarC.setText("Cadastrar");
+        btnEntrarC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarCActionPerformed(evt);
+            }
+        });
 
         lbLoginCadastroC.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lbLoginCadastroC.setText("Não tem uma conta");
@@ -197,6 +202,12 @@ public class Cadastro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEntrarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarCActionPerformed
+        //pegar dados dos campos
+        String nome = txtNome.getText();
+        
+    }//GEN-LAST:event_btnEntrarCActionPerformed
 
     /**
      * @param args the command line arguments
