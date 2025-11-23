@@ -32,9 +32,9 @@ public class menu extends javax.swing.JFrame {
         lbSoMemsag2 = new javax.swing.JLabel();
         panel1 = new java.awt.Panel();
         lbSoMemsag = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnRapido = new javax.swing.JButton();
+        btnMensag = new javax.swing.JButton();
+        btnContactos = new javax.swing.JButton();
         panel2 = new java.awt.Panel();
         jPanel2 = new javax.swing.JPanel();
         lbSoMemsag1 = new javax.swing.JLabel();
@@ -77,30 +77,40 @@ public class menu extends javax.swing.JFrame {
         lbSoMemsag.setMinimumSize(new java.awt.Dimension(7, 7));
         lbSoMemsag.setPreferredSize(new java.awt.Dimension(152, 71));
 
-        jButton3.setBackground(new java.awt.Color(51, 255, 0));
-        jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/agendamento1.png"))); // NOI18N
-        jButton3.setText("Agendamento");
-        jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton3.setPreferredSize(new java.awt.Dimension(83, 17));
-
-        jButton1.setBackground(new java.awt.Color(51, 255, 0));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/mensagem1.png"))); // NOI18N
-        jButton1.setText("Mensagens");
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnRapido.setBackground(new java.awt.Color(51, 255, 0));
+        btnRapido.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnRapido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/mensagRapido.png"))); // NOI18N
+        btnRapido.setText("Rápido");
+        btnRapido.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnRapido.setPreferredSize(new java.awt.Dimension(83, 17));
+        btnRapido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRapidoActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 255, 0));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/contactos.png"))); // NOI18N
-        jButton2.setText("Contactos");
-        jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton2.setPreferredSize(new java.awt.Dimension(83, 17));
+        btnMensag.setBackground(new java.awt.Color(51, 255, 0));
+        btnMensag.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnMensag.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/mensagem1.png"))); // NOI18N
+        btnMensag.setText("Mensagens");
+        btnMensag.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnMensag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMensagActionPerformed(evt);
+            }
+        });
+
+        btnContactos.setBackground(new java.awt.Color(51, 255, 0));
+        btnContactos.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnContactos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Formulario/contactos.png"))); // NOI18N
+        btnContactos.setText("Contactos");
+        btnContactos.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnContactos.setPreferredSize(new java.awt.Dimension(83, 17));
+        btnContactos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContactosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -109,11 +119,11 @@ public class menu extends javax.swing.JFrame {
             .addGroup(panel1Layout.createSequentialGroup()
                 .addComponent(lbSoMemsag, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMensag, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnContactos, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRapido, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         panel1Layout.setVerticalGroup(
@@ -121,11 +131,11 @@ public class menu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnContactos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel1Layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRapido, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnMensag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addComponent(lbSoMemsag, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
@@ -195,9 +205,23 @@ public class menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnMensagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMensagActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+         new mensagem().setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_btnMensagActionPerformed
+
+    private void btnRapidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRapidoActionPerformed
+        // TODO add your handling code here:luana
+        new Rapido().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btnRapidoActionPerformed
+
+    private void btnContactosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContactosActionPerformed
+        // TODO add your handling code here:
+         new contato().setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_btnContactosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,9 +259,9 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnContactos;
+    private javax.swing.JButton btnMensag;
+    private javax.swing.JButton btnRapido;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel2;
     private java.awt.Label label1;
